@@ -1,0 +1,339 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║              ✅ CHECKLIST: DEPLOY PASSO A PASSO                           ║
+║              Marque ✅ conforme for completando                           ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+Imprima esta página ou deixe aberta para acompanhar!
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 ETAPA 1: PREPARAÇÃO (5 minutos)
+
+[ ] 1.1 - Abri o Terminal/Prompt
+    ├─ Windows: Win + R → digite "cmd" → Enter
+    ├─ Mac: Command + Espaço → digite "terminal" → Enter
+    └─ Linux: Ctrl + Alt + T
+
+[ ] 1.2 - Testei se Git está instalado
+    └─ Digite: git --version
+    └─ Se der erro, instale: https://git-scm.com/downloads
+
+[ ] 1.3 - Fui para a pasta correta
+    └─ Digite: cd /mnt/user-data/outputs
+    └─ (Se Windows: cd C:\Users\SeuNome\...)
+
+[ ] 1.4 - Confirmei que estou no lugar certo
+    └─ Digite: ls (ou dir no Windows)
+    └─ Deve aparecer: demo_concessionaria.py
+
+═══════════════════════════════════════════════════════════════════════════
+
+🔧 ETAPA 2: CONFIGURAR GIT (3 minutos - só 1ª vez)
+
+[ ] 2.1 - Configurei meu nome
+    └─ Digite: git config --global user.name "Seu Nome Aqui"
+    └─ Substitua "Seu Nome Aqui" pelo seu nome real
+    └─ Exemplo: git config --global user.name "Maria Silva"
+
+[ ] 2.2 - Configurei meu email
+    └─ Digite: git config --global user.email "seu@email.com"
+    └─ Substitua pelo seu email real
+    └─ Exemplo: git config --global user.email "maria@gmail.com"
+
+[ ] 2.3 - Verifiquei que salvou
+    └─ Digite: git config --global user.name
+    └─ Digite: git config --global user.email
+    └─ Deve mostrar o que você digitou
+
+═══════════════════════════════════════════════════════════════════════════
+
+📦 ETAPA 3: PREPARAR CÓDIGO (2 minutos)
+
+[ ] 3.1 - Inicializei o repositório Git
+    └─ Digite: git init
+    └─ Deve aparecer: "Initialized empty Git repository..."
+
+[ ] 3.2 - Adicionei todos os arquivos
+    └─ Digite: git add .
+    └─ (Não esqueça o ponto no final!)
+    └─ Deve aparecer: nada ou lista de arquivos (ambos OK)
+
+[ ] 3.3 - Fiz o primeiro commit
+    └─ Digite: git commit -m "Primeira versão da demo"
+    └─ Deve aparecer: "[main ...] Primeira versão da demo"
+    └─ Com lista de arquivos modificados
+
+═══════════════════════════════════════════════════════════════════════════
+
+🌐 ETAPA 4: CRIAR CONTA NO GITHUB (5 minutos - só 1ª vez)
+
+[ ] 4.1 - Acessei o GitHub
+    └─ Abri navegador: https://github.com/
+
+[ ] 4.2 - Criei minha conta
+    └─ Cliquei em: "Sign up"
+    └─ Preenchi:
+        ├─ Username: ___________________
+        ├─ Email: ______________________
+        └─ Password: (crie uma senha forte)
+
+[ ] 4.3 - Verifiquei o email
+    └─ Abri o email que o GitHub mandou
+    └─ Cliquei no link ou digitei o código
+
+[ ] 4.4 - Fiz login
+    └─ Entrei na minha conta nova
+
+═══════════════════════════════════════════════════════════════════════════
+
+📁 ETAPA 5: CRIAR REPOSITÓRIO NO GITHUB (2 minutos)
+
+[ ] 5.1 - Cliquei no "+" (canto superior direito)
+
+[ ] 5.2 - Selecionei "New repository"
+
+[ ] 5.3 - Preenchi o formulário:
+    ├─ Repository name: demo-bi-concessionarias
+    ├─ Description: Demo Sistema BI para Concessionárias
+    └─ Public ou Private: (sua escolha)
+
+[ ] 5.4 - NÃO marquei nenhuma caixinha
+    └─ Deixei tudo desmarcado (README, .gitignore, license)
+
+[ ] 5.5 - Cliquei em "Create repository"
+
+[ ] 5.6 - Copiei a URL que apareceu
+    └─ Algo tipo: https://github.com/SEU-USUARIO/demo-bi-concessionarias.git
+    └─ ANOTEI AQUI: _____________________________________________
+
+═══════════════════════════════════════════════════════════════════════════
+
+🔗 ETAPA 6: CONECTAR COM GITHUB (3 minutos)
+
+[ ] 6.1 - Conectei meu computador com o GitHub
+    └─ Digite: git remote add origin [COLE SUA URL AQUI]
+    └─ Exemplo: git remote add origin https://github.com/maria/demo-bi-concessionarias.git
+    └─ Aperte Enter
+
+[ ] 6.2 - Preparei para enviar
+    └─ Digite: git branch -M main
+    └─ Aperte Enter
+
+═══════════════════════════════════════════════════════════════════════════
+
+🔑 ETAPA 7: CRIAR TOKEN (5 minutos - só 1ª vez)
+
+⚠️  IMPORTANTE: GitHub não aceita mais senha normal!
+
+[ ] 7.1 - No GitHub, cliquei na minha foto (canto direito)
+
+[ ] 7.2 - Cliquei em "Settings"
+
+[ ] 7.3 - Desci até "Developer settings" (fim da página)
+
+[ ] 7.4 - Cliquei em "Personal access tokens"
+
+[ ] 7.5 - Cliquei em "Tokens (classic)"
+
+[ ] 7.6 - Cliquei em "Generate new token (classic)"
+
+[ ] 7.7 - Preenchi:
+    ├─ Note: "Token para demo"
+    ├─ Expiration: 90 days
+    └─ Marque ✅ a caixinha: repo (full control)
+
+[ ] 7.8 - Cliquei em "Generate token" (fim da página)
+
+[ ] 7.9 - COPIEI O TOKEN (Ctrl+C)
+    └─ Parece: ghp_xxxxxxxxxxxxxxxx
+    └─ ⚠️  SALVEI EM LUGAR SEGURO! Não vou ver ele de novo!
+    └─ ANOTEI AQUI (depois apague): _____________________________
+
+═══════════════════════════════════════════════════════════════════════════
+
+📤 ETAPA 8: ENVIAR PARA GITHUB (2 minutos)
+
+[ ] 8.1 - Voltei pro terminal
+
+[ ] 8.2 - Enviei o código
+    └─ Digite: git push -u origin main
+    └─ Aperte Enter
+
+[ ] 8.3 - Digitei meu usuário GitHub quando pediu
+    └─ Username: seu-usuario
+
+[ ] 8.4 - COLEI O TOKEN quando pediu senha
+    └─ Password: [Cole o token aqui com Ctrl+V]
+    └─ ⚠️  NÃO VAI APARECER NA TELA! É normal.
+    └─ Aperte Enter
+
+[ ] 8.5 - Vi a mensagem de sucesso!
+    └─ Deve aparecer: "To https://github.com/..."
+    └─ E: "* [new branch]      main -> main"
+
+═══════════════════════════════════════════════════════════════════════════
+
+✅ ETAPA 9: CONFIRMAR NO GITHUB (1 minuto)
+
+[ ] 9.1 - Voltei pro navegador (GitHub)
+
+[ ] 9.2 - Atualizei a página (F5)
+
+[ ] 9.3 - Vi meus arquivos aparecendo!
+    └─ demo_concessionaria.py
+    └─ dados_concessionaria.xlsx
+    └─ requirements.txt
+    └─ etc.
+
+🎉 PARABÉNS! Seu código está no GitHub!
+
+═══════════════════════════════════════════════════════════════════════════
+
+☁️  ETAPA 10: STREAMLIT CLOUD (5 minutos)
+
+[ ] 10.1 - Acessei: https://share.streamlit.io/
+
+[ ] 10.2 - Cliquei em "Sign up" ou "Log in"
+
+[ ] 10.3 - Escolhi "Continue with GitHub"
+
+[ ] 10.4 - Autorizei o Streamlit Cloud
+    └─ Cliquei em "Authorize streamlit"
+
+[ ] 10.5 - Cliquei em "New app"
+
+[ ] 10.6 - Preenchi:
+    ├─ Repository: demo-bi-concessionarias
+    ├─ Branch: main
+    └─ Main file path: demo_concessionaria.py
+
+[ ] 10.7 - Cliquei em "Deploy!"
+
+[ ] 10.8 - Aguardei o deploy (2-5 minutos)
+    └─ Vi os logs aparecendo
+    └─ Aguardei até aparecer "Your app is live!"
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎊 ETAPA 11: TESTAR E COMPARTILHAR (2 minutos)
+
+[ ] 11.1 - Copiei a URL da minha demo
+    └─ Algo tipo: https://seu-usuario-demo-xyz.streamlit.app
+    └─ ANOTEI AQUI: _____________________________________________
+
+[ ] 11.2 - Testei em outra aba
+    └─ Abri a URL em nova aba
+    └─ Naveguei pelas páginas
+    └─ Confirmei que está funcionando
+
+[ ] 11.3 - Testei no celular
+    └─ Mandei a URL pro meu WhatsApp
+    └─ Abri no celular
+    └─ Funciona! 📱
+
+[ ] 11.4 - Compartilhei com alguém
+    └─ Mandei a URL para testar
+    └─ Pedi feedback
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 CHECKLIST FINAL - CONFIRME TUDO
+
+GITHUB:
+✅ [ ] Código está no GitHub
+✅ [ ] Consigo ver os arquivos lá
+✅ [ ] Salvei meu token em lugar seguro
+
+STREAMLIT CLOUD:
+✅ [ ] Deploy concluído
+✅ [ ] URL funcionando
+✅ [ ] Demo carregando normalmente
+
+COMPARTILHAMENTO:
+✅ [ ] Salvei a URL
+✅ [ ] Testei em diferentes dispositivos
+✅ [ ] Pronto para apresentar!
+
+═══════════════════════════════════════════════════════════════════════════
+
+🔄 PARA ATUALIZAR DEPOIS
+
+Quando fizer mudanças no código:
+
+[ ] 1. Fiz as mudanças nos arquivos
+[ ] 2. Abri o terminal na pasta
+[ ] 3. Digite: git add .
+[ ] 4. Digite: git commit -m "Descreva o que mudou"
+[ ] 5. Digite: git push
+[ ] 6. Aguardei 1 minuto
+[ ] 7. Streamlit Cloud atualizou automaticamente!
+
+═══════════════════════════════════════════════════════════════════════════
+
+🆘 SE ALGO DER ERRADO
+
+Problema: Git não reconhecido
+Solução: Instale em https://git-scm.com/downloads
+
+Problema: Senha recusada
+Solução: Use o TOKEN, não a senha normal
+
+Problema: Arquivo não aparece no GitHub
+Solução: 
+  1. Verifique se fez: git add .
+  2. Verifique se fez: git commit
+  3. Verifique se fez: git push
+
+Problema: Deploy falhou no Streamlit
+Solução:
+  1. Veja os logs de erro
+  2. Geralmente falta algo no requirements.txt
+  3. Adicione e faça push novamente
+
+═══════════════════════════════════════════════════════════════════════════
+
+📚 RECURSOS DE AJUDA
+
+Guias Criados:
+📄 GIT_PARA_INICIANTES.md ⭐ Explicação detalhada
+📄 GIT_COM_PIZZA.md ⭐ Com analogias simples
+📄 DEPLOY_SIMPLIFICADO.md ⭐ Passo a passo visual
+📄 GUIA_DEPLOY_STREAMLIT_CLOUD.md - Completo
+
+Scripts:
+🔧 setup_deploy.sh - Automatiza tudo!
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎉 VOCÊ CONSEGUIU!
+
+Parabéns por completar todos os passos! 🎊
+
+Você agora tem:
+✅ Código no GitHub (versionado e seguro)
+✅ Demo online (acessível de qualquer lugar)
+✅ URL profissional (para compartilhar com clientes)
+
+O que você aprendeu:
+✅ Git (controle de versão)
+✅ GitHub (hospedagem de código)
+✅ Streamlit Cloud (deploy de apps)
+✅ Terminal/comandos básicos
+
+Isso é MUITO para um dia! 💪
+
+Próximos passos:
+→ Compartilhe com clientes
+→ Colete feedback
+→ Faça melhorias
+→ Feche negócios! 💰
+
+═══════════════════════════════════════════════════════════════════════════
+
+Desenvolvido com ❤️ para iniciantes
+
+Boa sorte com sua demo! 🚀
+
+═══════════════════════════════════════════════════════════════════════════
